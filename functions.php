@@ -131,7 +131,7 @@ class wsk_walker extends Walker_Nav_Menu
 			$output .= $indent . '<li id="menu-item-'. $object->ID . '"' . $value . $class_names .'>';
 			
 			$object_output = $args->before;
-			$object_output .= '<a class="material"'. $attributes .' data-transition="slide">';
+			$object_output .= '<a class="material"'. $attributes .' bubble-size="big">';
 			$object_output .= $args->link_before .$wsk_menu_icon;
 			$object_output .= apply_filters( 'the_title', $object->title, $object->ID ).$args->link_after;
 			$object_output .= '</a>';

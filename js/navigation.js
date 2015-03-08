@@ -25,17 +25,17 @@
         $toggle.on("click", wskMenuRollout);
         $window.on("load resize scroll", wskMenuHeight);
         $material.on("touchstart", wskShowTouchBubble);
-        $material.on("touchend touchcancel", wskHideTouchBubble);
+        $document.on("touchend touchcancel", wskHideTouchBubble);
         //wskMenuDragout();
 
     });
 
     // Functions
-    function wskMenuHeight() {
+    function wskMenuHeight() { //sets the header height * called on window load, resize & scroll
         $navigation.css("height", navHeight);
     }
 
-    function wskMenuRollout() {
+    function wskMenuRollout() { //rolls-out the menu on click
         $menuoverlay.toggleClass("transparent");
         $menu.addClass("fastest-transition").toggleClass("rolled-out");
         $toggle.find(".menubutton").toggleClass("open");
@@ -47,13 +47,17 @@
         var $this = $(this),
             xStartPos = parseInt(startEvent.originalEvent.touches[0].pageX),
             $bubblewrap = $this.parent(),
+            bubbleSize = $this.attr("bubble-size"),
             wrapped = false,
             parentHeight = $this.parent().height(),
-            thisWidth = 90;
-        $(this).parent().append('<div class="touchbubble normal animated inflate"></div>');
+            parentPosition = $this.parent().offset().left,
+            thisWidth;
+        $(this).parent().append('<div class="touchbubble ' + bubbleSize + 'bubble normal animated inflate"></div>');
+        thisWidth = $(this).parent().find(".touchbubble").width();
+        console.log(parentPosition);
         $(".touchbubble").css({
-            left: xStartPos-thisWidth +"px",
-            top: parentHeight/2-thisWidth +"px"
+            left: xStartPos - thisWidth / 2 - parentPosition + "px",
+            top: parentHeight / 2 - thisWidth / 2 + "px"
         });
     }
 

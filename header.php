@@ -32,17 +32,19 @@ $menuButton = $wskfw['opt-menu-button'];
 	<div id="page" class="hfeed site small-12 medium-12 large-12 columns">
 		<header id="header" class="row sticky-top css3-shadow">
 			<div class="menutoggle small-2 columns">
-                <div class="menubutton fastest-transition">
+                <div class="menubutton material fastest-transition" bubble-size="small">
                     <div class="line top-line fastest-transition"></div>
                     <div class="line center-line fastest-transition"></div>
                     <div class="line bottom-line fastest-transition"></div>
                 </div>
             </div>
-            <div class="homebutton small-5 columns">
-                <a href="#home"><img src='<?php echo $headerLogo["url"]?>' alt="logo"/></a>
+            <div class="hometoggle small-5 columns">
+                <div class="homebutton material" bubble-size="big">
+                    <a href="#home"><img src='<?php echo $headerLogo["url"]?>' alt="logo"/></a>
+                </div>
             </div>
-			<div class="socialarea small-5 columns">
-                <div class="socialbuttons lightning-transition">
+			<div class="socialtoggle small-5 columns">
+                <div class="socialbuttons material lightning-transition" bubble-size="small">
                     <div href="#" class="share"><img src="http://wearska.com/ska/wp-content/uploads/2015/03/share11.svg" alt="logo"/></div>
                     <div href="#" class="love"><img src="http://wearska.com/ska/wp-content/uploads/2015/03/plain13.svg" alt="logo"/></div>
                     <div href="#" class="search"><img src="http://wearska.com/ska/wp-content/uploads/2015/03/magnifier12.svg" alt="logo"/></div>
