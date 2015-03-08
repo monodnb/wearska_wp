@@ -25,6 +25,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import url("css/normalize.css");
 @import url("css/branding.css");
 @import url("css/elements.css");
-@import url(css/animations.css);
-@import url(css/foundation.css);
-@import url(css/layout.css);
+@import url("css/animations.css");
+@import url("css/foundation.css");
+@import url("css/layout.css");
