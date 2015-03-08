@@ -25,13 +25,13 @@
         $toggle.on("click", wskMenuRollout);
         $window.on("load resize scroll", wskMenuHeight);
         $material.on("touchstart", wskShowTouchBubble);
-        $document.on("touchend touchcancel", wskHideTouchBubble);
+        $material.on("touchend touchcancel", wskHideTouchBubble);
         //wskMenuDragout();
 
     });
 
     // Functions
-    function wskMenuHeight() { //sets the header height * called on window load, resize & scroll
+    function wskMenuHeight() { //sets the menu height * called on window load, resize & scroll
         $navigation.css("height", navHeight);
     }
 
