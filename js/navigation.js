@@ -24,9 +24,6 @@
         // Event delegation
         $toggle.on("click", wskMenuRollout);
         $window.on("load resize scroll", wskMenuHeight);
-        /*$document.on("touchstart", function () {
-            //console.log("touched document");
-        });*/
         $material.on("touchstart", wskShowTouchBubble);
         $material.on("touchend touchcancel", wskHideTouchBubble);
         //wskMenuDragout();
@@ -46,21 +43,22 @@
     }
 
     function wskShowTouchBubble(startEvent) {
-        console.log("touched");
-        $(".touchbubble").remove()
-        var $this = $(this);
-        /*$(".touchbubble").remove();
+        $(".touchbubble").remove();
         var $this = $(this),
+            xStartPos = parseInt(startEvent.originalEvent.touches[0].pageX),
             $bubblewrap = $this.parent(),
             wrapped = false,
-            thisHeight = $this.parent().height(),
-            thisWidth;*/
+            parentHeight = $this.parent().height(),
+            thisWidth = 90;
         $(this).parent().append('<div class="touchbubble normal animated inflate"></div>');
+        $(".touchbubble").css({
+            left: xStartPos-thisWidth +"px",
+            top: parentHeight/2-thisWidth +"px"
+        });
     }
 
     function wskHideTouchBubble(endEvent) {
-        console.log("ended");
-        $(".touchbubble").fadeOut();
+        $(".touchbubble").fadeOut(100);
     }
 
     function wskMenuDragout() {
