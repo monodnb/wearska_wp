@@ -1,0 +1,168 @@
+
+/*--------------------------------------------------------------
+12.1 Portfolio layout - Single Page Grid
+--------------------------------------------------------------*/
+
+/*-------------grid-------------*/
+#wskpf-grid.single-page-grid {
+	position:relative;
+}
+
+/*-------------post-------------*/
+.single-page-grid .wskpf-post {
+	display: block;
+	position: absolute;
+	background-color: gray;
+	border: 1px solid white;
+}
+.wskpf-post {
+	overflow:hidden;
+}
+/*-------------post hover-------------*/
+
+.wskpf-post:hover .wskpf-post-overlay {
+	transition-delay: 0s;
+	top: 0;
+	opacity: 0.8;
+}
+.wskpf-post:hover .wskpf-post-icons {
+	opacity: 0.8;
+}
+
+/*-------------post thumb-------------*/
+
+.wskpf-post-thumb > .wskpf-img-container > img {
+	height: 100%;
+	width: 100%;
+}
+.wskpf-post-thumb .wskpf-post-overlay {
+	position: absolute;
+	top: -100%;
+	opacity: 0.8;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	-webkit-transition: top 0.2s ease-in-out, opacity 0.5s ease-in-out;
+	-moz-transition: top 0.2s ease-in-out, opacity 0.5s ease-in-out;
+	-o-transition: top 0.2s ease-in-out, opacity 0.5s ease-in-out;
+	transition: top 0.2s ease-in-out, opacity 0.5s ease-in-out;
+}
+/*-------------post overlay content-------------*/
+
+.wskpf-post-icons {
+	text-align: center;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+.wskpf-post-icons .icon {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left:0;
+	right:0;
+	margin:auto;
+	-webkit-transition: background-color 0.3s ease-in-out;
+	-moz-transition: background-color 0.3s ease-in-out;
+	-o-transition: background-color 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out;
+}
+.wskpf-post-icons a > img {
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.wskpf-post-icons .wskpf-type-soundcloud-audio {
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	background-color: black;
+}
+.wskpf-post-icons .wskpf-type-youtube-video {
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	background-color: black;
+}
+.wskpf-post-icons .wskpf-type-external-link {
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	background-color: black;
+}
+.wskpf-post-icons .wskpf-type-image-slider {
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	background-color: black;
+}
+.wskpf-post-icons .wskpf-type-soundcloud-audio:hover,
+.wskpf-post-icons .wskpf-type-youtube-video:hover,
+.wskpf-post-icons .wskpf-type-external-link:hover,
+.wskpf-post-icons .wskpf-type-image-slider:hover {
+	background-color: #a8023c;
+}
+
+/*--------------------------------------------------------------
+11.3 Project pages
+--------------------------------------------------------------*/
+
+/*Project container*/
+#wskpf-project-page {
+	width: 1200px;
+	margin: 30px auto;
+	padding: 5px;
+}
+#wskpf-project-page .project-media {
+	width: 1170px;
+	margin: 10px auto 30px auto;
+	overflow: hidden;
+}
+#wskpf-project-page .project-info {
+	width: 1170px;
+	margin: auto;
+	overflow: hidden;
+	text-align: left;
+}
+#wskpf-project-page .project-info h3{
+	font-size: 24px;
+}
+#wskpf-project-page .project-info p{
+	border-bottom: 1px solid #e8e8e8;
+	padding-bottom: 7px;
+}
+
+/*Ajax navigation*/
+.project-navigation {
+	width: 1170px;
+	height: 40px;
+	margin: 0 auto 0 auto;
+	text-align: left;
+}
+.project-navigation h1{
+	float: left;
+	font-size: 30px;
+	font-family:'bebas_neuebold';
+	line-height: 40px;
+	border-bottom: 1px solid #e8e8e8;
+}
+.project-navigation .nav-links{
+	float: right;
+	margin-right: 20px;
+	font-size: 30px;
+	line-height: 40px;
+}
+
+.project-navigation .nav-links > i{
+	cursor: pointer;
+}
+.project-navigation .nav-links > i:hover{
+	color: #666;
+}
